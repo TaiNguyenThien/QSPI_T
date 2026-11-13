@@ -1,0 +1,12 @@
+
+`timescale 1ns/1ps
+
+package axi_slave_agent_pkg;
+    import uvm_pkg::*;
+    `include "uvm_macros.svh"
+    `include "axi_slave_transaction.sv"
+    `include "axi_slave_sequencer.sv"
+    `include "axi_slave_driver.sv"
+    `include "axi_slave_monitor.sv"
+    `include "axi_slave_agent.sv"
+endpackage
