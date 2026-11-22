@@ -1,0 +1,7 @@
+# Xcelium blind black-box functional coverage configuration for the QSPI DV project.
+# Collect functional covergroups and boundary SVA assertions only;
+# explicitly exclude DUT internals (top_module...) and reusable VIP/UVM packages
+# from both code/assertion coverage (-all) and covergroup coverage (-covergroup).
+select_functional
+deselect_coverage -all -module top_module... uvm_pkg* apb_agent_pkg* qspi_agent_pkg* axi_slave_agent_pkg* axil_master_agent_pkg*
+deselect_coverage -covergroup -module top_module... uvm_pkg* apb_agent_pkg* qspi_agent_pkg* axi_slave_agent_pkg* axil_master_agent_pkg*

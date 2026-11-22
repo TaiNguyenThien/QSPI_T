@@ -1,0 +1,19 @@
+package qspi_cov_pkg;
+  timeunit 1ns;
+  timeprecision 1ps;
+  import uvm_pkg::*;
+  import apb_agent_pkg::*;
+  import qspi_types_pkg::*;
+  import qspi_cfg_pkg::*;
+  import qspi_ral_pkg::*;
+  import qspi_agent_pkg::*;
+  import axi_slave_agent_pkg::*;
+  import axil_master_agent_pkg::*;
+  `include "uvm_macros.svh"
+  `include "tb/cov/qspi_apb_cov.sv"
+  `include "tb/cov/qspi_reg_cov.sv"
+  `include "tb/cov/qspi_irq_cov.sv"
+  `include "tb/cov/qspi_pio_cov.sv"
+  `include "tb/cov/qspi_dma_cov.sv"
+  `include "tb/cov/qspi_xip_cov.sv"
+endpackage : qspi_cov_pkg
